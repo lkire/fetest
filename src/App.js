@@ -33,9 +33,33 @@ import './App.css';
 //        document.body.appendChild(script);
 //    }
 
+
+const API = 'http://demo.ryptco.com:5007';
+const DEFAULT_QUERY = '';
+
 class App extends Component {
-  render() {
-    return (
+  constructor(props) {
+    super(props);
+
+    this.state = {
+	message: "derp",
+    };
+  }
+
+  componentDidMount() {
+    fetch('http://demo.ryptco.com:5007').then(response => response.json())
+	  .then(data => this.setState({ message: data.message}));
+      // console.log(this.state.message);
+      // .then(function(object) { console.log(object)
+      // })
+  }
+    
+    render() {
+	const st = this.state.message // fetch('http://demo.ryptco.com:5007').then(response => response.json())
+	
+      return (
+	  
+	  
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -44,7 +68,7 @@ class App extends Component {
           </p>
           <a
             className="App-link"
-            href="http://demo.ryptco.com:5006"
+            href="http://demo.ryptco.com:5007"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -61,7 +85,11 @@ class App extends Component {
             My second example
         </a>
 
-	    <MyComponent name="test" />
+	<p>
+	      {this.state.message}
+	</p>      
+	  
+	    
         </header>
 	    
       </div>
@@ -70,3 +98,11 @@ class App extends Component {
 }
 
 export default App;
+
+	// <ul>
+        //      {hits.map(hit =>
+	//	<li key={hit.objectID}>
+	//	<a href={hit.url}>{hit.title}</a>
+	//	</li>
+	// )}
+	// </ul>
