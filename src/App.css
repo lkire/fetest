@@ -3,12 +3,19 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  max-width: 100vw;
+  max-height: 20vh;
+  /*flex-direction: column;*/
+  /**/
+  /*animation: App-logo-spin infinite 5s linear;*/
+  /*height: 40vmin;*/
+  /*b*/
+  /*<img src={} className="App-logo" alt="logo" /> */
 }
 
+
 .App-header {
-  background-color: #282c34;
+  background-color: #1D2731;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,10 +23,13 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background: linear-gradient(170deg, #001D2731 5%, #1D2731 30%), url("./webcover.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #D9B310;
 }
 
 @keyframes App-logo-spin {
