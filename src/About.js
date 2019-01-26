@@ -55,7 +55,7 @@ function AboutPage(props) {
       
 	
 	   <Typography variant="subtitle1" gutterBottom>
-	      <b> Welcome to my page for demos! </b> It serves as a testbed and portfolio for
+	      <b> Welcome to my app for demos! </b> It serves as a testbed and portfolio for
 		  delivering projects and patterns all the way to production.
 	      All the demos--including visuals, machine learning models, and 
         live data processing--will be appearing in the coming days.
@@ -98,10 +98,11 @@ function AboutPage(props) {
   <li> the adoption of a philosophy of data-driven decision making,</li>
   <li> the shortage of common vocabulary for communicating quantitative ideas.</li>
   </ol>
-  This website is a sandbox for addressing the first point--addressing the other two is a project of much greater scope.
+  This website is a sandbox for addressing the first 
+  point--addressing the other two is a project of different 
+  scope, to put it politely.
   But readily wrapping mathematical ideas in
-  easily-accessible content will alleviate some struggles 
-  associated with conveying them.
+  easily-accessible content will help with with conveying them.
   </Typography>
  
     <Typography variant="h4" color="primary" gutterBottom>
