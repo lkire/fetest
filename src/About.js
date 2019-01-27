@@ -43,11 +43,20 @@ function AboutPage(props) {
 
     return (
     <div className={classes.root}>
-      {/*<Typography component="h2" variant="h1" color="primary" gutterBottom>
-        Welcome
-      </Typography>
-    */}
-      <GridList cellHeight={400} cols={1} spacing={2} className={classes.gridList}>
+
+              <a
+                className="App-link"
+                href="http://demo.ryptco.com:5006"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+	                   	My first example
+              </a>
+
+              <script src={"http://demo.ryptco.com:5006/testapp"}></script>
+
+
+	    <GridList cellHeight={400} cols={1} spacing={2} className={classes.gridList}>
           <GridListTile key={profile} >
             <img src={profile} />
           </GridListTile>
@@ -67,7 +76,7 @@ function AboutPage(props) {
         Background 
       </Typography>
 
-	<Typography variant="paragraph" gutterBottom>
+	<Typography variant="body1" gutterBottom>
   I am an experimental particle physicist moving into the technology 
   industry. After many years at {<a href='https://home.cern/'>CERN</a>} I have grown an enthusiasm for communicating 
   complex ideas with a distilled elegance and economy. Successfully 
@@ -80,14 +89,14 @@ function AboutPage(props) {
         Motivation 
       </Typography>
 
-<Typography variant="paragraph" gutterBottom>
+<Typography variant="body1" gutterBottom>
   The advertising success of "AI" and "Machine Learning" has created 
   for its practitioners a crisis in 
   the demand for the frequent communication of its ideas, results, and progress  
   in the business environment. There are currently only partial solutions to this problem. 
 </Typography>
 
-  <Typography variant="paragraph" gutterBottom>
+  <Typography variant="body1" gutterBottom>
   I recently co-founded an investment management company in the crytocurrency space.
   The barriers to success for this company 
   turned out to be unrelated to the problems of mathematical finance. 
@@ -109,7 +118,7 @@ function AboutPage(props) {
     Solution
   </Typography>     
   
-  <Typography variant="paragraph" gutterBottom>
+  <Typography variant="body1" gutterBottom>
   There are many projects tackling the problem of quickly delivering
   scalable, server-backed, interactive visualization to the web. 
   I think {<a href='https://bokeh.pydata.org/en/latest/'>Bokeh</a>} is the closest to giving real access to the modern methods 
@@ -117,7 +126,7 @@ function AboutPage(props) {
   quantitative specialists who need to focus their time on solving 
    problems and efficiently communicate with a diverse team and clients. 
   </Typography>
-  <Typography variant="paragraph" gutterBottom>
+  <Typography variant="body1" gutterBottom>
    {<a href='http://holoviews.org/'>Holoviews</a>} and associated projects provide most of the tools to handle the common time 
   wasters when producing web visualization, like issues related to duplication of work, 
   threading, blocking,
@@ -131,7 +140,7 @@ function AboutPage(props) {
 
   <Divider variant="middle" color="primary"/>
 
-  <Typography variant="paragraph" gutterBottom>
+  <Typography variant="body1" gutterBottom>
   In practice, I suspect it will be touchy work 
   scaling to maintain optimal response times under varying load. 
   This site exists to work out the kinks in deploying these 
