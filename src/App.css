@@ -16,16 +16,23 @@
 
 .App-header {
   background-color: #1D2731;
-  min-height: 100vh;
   display: flex;
+  
+  /*min-height: 100vh;
   flex-direction: column;
+  #6384A0
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-  background: linear-gradient(170deg, #001D2731 5%, #1D2731 30%), url("./webcover.jpg");
+  color: white;*/
+  background: linear-gradient(177.3deg, 
+    #FFFAFAFA 24%, 
+    #00000000 43%,
+    
+    #FFFAFAFA 48%), 
+    url("./columbia.jpg") no-repeat 80% 30%;
   background-size: 100%;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
 }
 
 .App-link {
