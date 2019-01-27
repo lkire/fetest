@@ -11,22 +11,21 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import SvgIcon from '@material-ui/core/SvgIcon';
-import Badge from '@material-ui/core/Badge';
+
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import NotificationsIcon from '@material-ui/icons/Notifications';
-/////////////
-import GitHubButton from 'react-github-button';
-////////////
 
-import { mainListItems, secondaryListItems } from './listItems';
+
+import { secondaryListItems } from './listItems';
 import MainListItems from './mainListItems'
 // import SimpleLineChart from './SimpleLineChart';
-import SimpleTable from './SimpleTable';
+
 import './App.css';
 import About from './About';
 import Soon from './Soon';
 import Visuals from './Visuals';
+
+
 
 const drawerWidth = 200;
 
@@ -116,14 +115,18 @@ class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedIndex: 1
+      selectedIndex: 1,
+      hits: null,
     };
+
   }
   
 
   state = {
     open: true,
+
   };
+
 
   handleDrawerOpen = () => {
     this.setState({ open: true });
@@ -138,7 +141,10 @@ class Dashboard extends React.Component {
   render() {
     const { classes } = this.props;
 
+    
+
     return (
+
       <div className={
         this.state.selectedIndex >= 0
         ? classes.root
@@ -225,6 +231,9 @@ class Dashboard extends React.Component {
         </Drawer>
         <main className={classes.content}>
           <div className={classes.appBarSpacer} />
+
+
+
           {{
           0: <About />,
           1: <Soon />,
@@ -234,8 +243,9 @@ class Dashboard extends React.Component {
         }[this.state.selectedIndex]}
           <Typography variant="h4" gutterBottom  color="secondary">
             Page {this.state.selectedIndex}
+            
           </Typography>
-        
+        <div src={this.state.hits} />
 
           {/*<div className={classes.tableContainer}>
             <SimpleTable />
