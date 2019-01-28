@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 import classnames from 'classnames';
 import Card from '@material-ui/core/Card';
+import GridListTileBar from '@material-ui/core/GridListTileBar';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
@@ -20,13 +21,27 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
+import ZoomOutMapIcon from '@material-ui/icons/ZoomOutMap';
 
 import withWidth from '@material-ui/core/withWidth';
+import Fullscreen from "react-full-screen";
+import AspectRatio from 'react-aspect-ratio';
 
 const styles = theme => ({
   card: {
-    maxWidth: 400,
+    width: 1200
   },
+
+  media: {
+  	height: '40vw',
+  	
+  },
+
+  fullscreen: {
+  	backgroundt: '#ffffff',
+  	
+  },
+
   root: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -82,30 +97,41 @@ class LiveCard extends React.Component {
 
     return (
       <div className={classes.root}>
+
       	<Card className={classes.card}>
+      	
 	    <CardHeader
 
 	      action={
-	        <IconButton>
-	          <MoreVertIcon />
+	        <IconButton aria-label="Share">
+	          <ShareIcon />
 	        </IconButton>
 	      }
 	        title={this.props.title}
 
 	      />
+	      
+	    	
+        <Fullscreen
+      	  
+          enabled={this.state.full}
+          onChange={full => this.setState({full})}
+        >
 	      <CardMedia
-	        className={classes.media}
+	        
 	        component="iframe"
-	        src={this.props.src}
+	        className={classes.media}
+
+	        src={this.props.src || 'http://demo.ryptco.com:5006'}
 	        title={this.props.title}
 	      />
+	      </Fullscreen>
+	      
+
 	      <CardActions className={classes.actions} disableActionSpacing>
-	        <IconButton aria-label="Add to favorites">
-	          <FavoriteIcon />
-	        </IconButton> 
-	        <IconButton aria-label="Share">
-	          <ShareIcon />
-	        </IconButton>
+
+	        
+
 	        <IconButton
 	          className={classnames(classes.expand, {
 	            [classes.expandOpen]: this.state.expanded,
@@ -116,13 +142,18 @@ class LiveCard extends React.Component {
 	        >
 	        <ExpandMoreIcon />
 	        </IconButton>
+	        <IconButton aria-label="Fullscreen" onClick={this.setFull}>
+	          <ZoomOutMapIcon />
+	        </IconButton>
 	      </CardActions>
 	      <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
 	        <CardContent>
 	          <Typography paragraph>Method:</Typography>
 	        </CardContent>
 	      </Collapse>
+	      
 	    </Card>
+	    
     </div>
 	);
   }
