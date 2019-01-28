@@ -6,7 +6,7 @@ import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
-import tileData from './visuals/tileData';
+
 import image from './profile_smaller.jpg';
 import profile from './about/profile_bw.jpg'
 import withWidth from '@material-ui/core/withWidth';
@@ -98,7 +98,7 @@ function AboutPage(props) {
 
   <Typography variant="body1" gutterBottom>
   I recently co-founded an investment management company in the crytocurrency space.
-  The barriers to success for this company 
+  Some of the barriers to success for this company 
   turned out to be unrelated to the problems of mathematical finance. 
 
   Rather unexpectedly, they seemed more to be associated with all too common data science headaches:
