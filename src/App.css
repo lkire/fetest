@@ -14,6 +14,10 @@
 }
 
 
+.fullscreen-enabled  {
+  background: #ffffff;
+}
+
 .App-header {
   background-color: #1D2731;
   display: flex;
