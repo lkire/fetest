@@ -90,28 +90,29 @@ function AboutPage(props) {
       </Typography>
 
 <Typography variant="body1" gutterBottom>
-  The advertising success of "AI" and "Machine Learning" has created 
-  for its practitioners a crisis in 
-  the demand for the frequent communication of its ideas, results, and progress  
-  in the business environment. There are currently only partial solutions to this problem. 
+  The advertising success of "AI" and "Machine Learning" can create 
+  for its practitioners a heavy demand for the frequent communication of its ideas, results, and progress  
+  in the business environment--an environment in which its mathematical foundations may not be widely understood. 
+  Satisfying this demand is currently only a partially solved problem. 
 </Typography>
 
   <Typography variant="body1" gutterBottom>
   I recently co-founded an investment management company in the crytocurrency space.
-  Some of the barriers to success for this company 
+  Some barriers to success for this company 
   turned out to be unrelated to the problems of mathematical finance. 
 
-  Rather unexpectedly, they seemed more to be associated with all too common data science headaches:
+  Rather unexpectedly, they were attributable to all too common data science headaches:
   <ol>
-  <li> the unencumbered delivery of production-level visual content,</li>
   <li> the adoption of a philosophy of data-driven decision making,</li>
-  <li> the shortage of common vocabulary for communicating quantitative ideas.</li>
+  <li> the low literacy for basic quantitative ideas,</li>
+  <li> and consequently the unencumbered delivery of production-level visual content to make up the gap.</li>
   </ol>
-  This website is a sandbox for addressing the first 
-  point--addressing the other two is a project of different 
+  This website is a sandbox for addressing the last 
+  point--addressing the first two outright is a project of different 
   scope, to put it politely.
   But readily wrapping mathematical ideas in
-  easily-accessible content will help with with conveying them.
+  easily-accessible visual content helps with conveying them. 
+  This is an interesting problem--and one whose solution is immensely valuable.
   </Typography>
  
     <Typography variant="h4" color="primary" gutterBottom>
