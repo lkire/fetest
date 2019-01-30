@@ -14,4 +14,6 @@ RUN npm install --silent
 RUN npm install react-scripts@2.1.3 -g --silent
 
 # start app
-CMD ["npm", "start"]
+#CMD ["npm", "start"]
+# production
+CMD ["node", "app.js"]
