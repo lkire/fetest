@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: lkire-app
+  namespace: default
+spec:
+  containers:
+  - name: lkire-app
+    image: localhost:32000/alkire-app:testlocal
+  restartPolicy: Always
