@@ -14,6 +14,7 @@ import architecture from './about/ProductionDS.jpg'
 import withWidth from '@material-ui/core/withWidth';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
+import AspectRatio from 'react-aspect-ratio';
 
 const styles = theme => ({
   root: {
@@ -28,6 +29,12 @@ const styles = theme => ({
     height: 400,
     // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
     transform: 'translateZ(0)',
+  },
+
+  media: {
+    width: '80vw',
+    maxWidth: 800,
+    
   },
   titleBar: {
     background:
@@ -150,8 +157,11 @@ function AboutPage(props) {
     Architecture
   </Typography> 
 
-  <img src={architecture} />
 
+
+  <AspectRatio>
+    <img src={architecture} className={classes.media}/>
+  </AspectRatio>
 
     </div>
   );
