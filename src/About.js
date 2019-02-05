@@ -9,6 +9,8 @@ import InfoIcon from '@material-ui/icons/Info';
 
 import image from './profile_smaller.jpg';
 import profile from './about/profile_bw.jpg'
+import architecture from './about/ProductionDS.jpg'
+
 import withWidth from '@material-ui/core/withWidth';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
@@ -37,25 +39,21 @@ const styles = theme => ({
   },
 });
 
+//              <a
+//                className="App-link"
+//                href="http://demo.ryptco.com:5006"
+//                target="_blank"
+//                rel="noopener noreferrer"
+//            >
+//                      My first example
+//              </a>
+
 
 function AboutPage(props) {
   const { classes } = props;
 
     return (
     <div className={classes.root}>
-
-              <a
-                className="App-link"
-                href="http://demo.ryptco.com:5006"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-	                   	My first example
-              </a>
-
-              <script src={"http://demo.ryptco.com:5006/testapp"}></script>
-
-
 	    <GridList cellHeight={400} cols={1} spacing={2} className={classes.gridList}>
           <GridListTile key={profile} >
             <img src={profile} />
@@ -93,7 +91,7 @@ function AboutPage(props) {
   The advertising success of "AI" and "Machine Learning" can create 
   for its practitioners a heavy demand for the frequent communication of its ideas, results, and progress  
   in the business environment--an environment in which its mathematical foundations may not be widely understood. 
-  Satisfying this demand is currently only a partially solved problem. 
+  Satisfying this demand is currently an open problem. 
 </Typography>
 
   <Typography variant="body1" gutterBottom>
@@ -103,9 +101,9 @@ function AboutPage(props) {
 
   Rather unexpectedly, they were attributable to all too common data science headaches:
   <ol>
-  <li> the adoption of a philosophy of data-driven decision making,</li>
-  <li> the low literacy for basic quantitative ideas,</li>
-  <li> and consequently the unencumbered delivery of production-level visual content to make up the gap.</li>
+  <li> adoption of a philosophy of data-driven decision making,</li>
+  <li> low quantitative literacy,</li>
+  <li> the demand for production-level visual content at early stages to fill the gap.</li>
   </ol>
   This website is a sandbox for addressing the last 
   point--addressing the first two outright is a project of different 
@@ -122,8 +120,8 @@ function AboutPage(props) {
   <Typography variant="body1" gutterBottom>
   There are many projects tackling the problem of quickly delivering
   scalable, server-backed, interactive visualization to the web. 
-  I think {<a href='https://bokeh.pydata.org/en/latest/'>Bokeh</a>} is the closest to giving real access to the modern methods 
-  of visual communication to 
+  I think {<a href='https://bokeh.pydata.org/en/latest/'>Bokeh</a>} is the closest to giving real access to a flexible modern toolbox 
+  for visual communication to 
   quantitative specialists who need to focus their time on solving 
    problems and efficiently communicate with a diverse team and clients. 
   </Typography>
@@ -147,6 +145,13 @@ function AboutPage(props) {
   This site exists to work out the kinks in deploying these 
   technologies together in a React App.  
   </Typography>
+
+  <Typography variant="h4" color="primary" gutterBottom>
+    Architecture
+  </Typography> 
+
+  <img src={architecture} />
+
 
     </div>
   );
