@@ -29,13 +29,17 @@ import AspectRatio from 'react-aspect-ratio';
 
 const styles = theme => ({
   card: {
-    width: 1200
+
   },
 
-  media: {
-  	height: '40vw',
-  	
+
+  iframe: {
+  margin: 'auto',
+  height: '45vw',
+  width: '80vw',
+
   },
+
 
   fullscreen: {
   	backgroundt: '#ffffff',
@@ -57,7 +61,7 @@ const styles = theme => ({
   },
   titleBar: {
     background:
-      'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, ' +
+      'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, ' + 
       'rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
   },
   icon: {
@@ -111,23 +115,31 @@ class LiveCard extends React.Component {
 
 	      />
 	      
-	    	
+
+	    
         <Fullscreen
       	  
           enabled={this.state.full}
           onChange={full => this.setState({full})}
         >
+	
+   
 	      <CardMedia
 	        
 	        component="iframe"
-	        className={classes.media}
+	        className={classes.iframe}
+          frameborder="0"
 
 	        src={this.props.src || 'http://demo.ryptco.com:5006'}
 	        title={this.props.title}
-	      />
-	      </Fullscreen>
-	      
+	       />
+         
+        
+        
+	   
 
+	      </Fullscreen>
+	      	    
 	      <CardActions className={classes.actions} disableActionSpacing>
 
 	        
