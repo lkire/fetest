@@ -3,15 +3,10 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
-import GridListTileBar from '@material-ui/core/GridListTileBar';
-import IconButton from '@material-ui/core/IconButton';
-import InfoIcon from '@material-ui/icons/Info';
-import tileData from './visuals/tileData';
 
 import columbia from './columbia.jpg'
 import withWidth from '@material-ui/core/withWidth';
 import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
 
 const styles = theme => ({
   root: {
@@ -46,7 +41,7 @@ function SoonPage(props) {
 
       <GridList cellHeight={400} cols={1} spacing={2} className={classes.gridList}>
           <GridListTile key={columbia} >
-            <img src={columbia} />
+            <img src={columbia} alt="this is the alt"/>
           </GridListTile>
       </GridList>
       
