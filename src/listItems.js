@@ -3,23 +3,12 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
-import DashboardIcon from '@material-ui/icons/Dashboard';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import AssessmentIcon from '@material-ui/icons/Assessment';
-
 import AssignmentIcon from '@material-ui/icons/Assignment';
-
-import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
-import Insert_ChartIcon from '@material-ui/icons/InsertChart';
+import InsertChartIcon from '@material-ui/icons/InsertChart';
 import FunctionsIcon from '@material-ui/icons/Functions';
-
 import MyAv from './avatar'
-import Avatar from '@material-ui/core/Avatar';
-
-
-
 
 export const mainListItems = (
   <div>
@@ -35,7 +24,7 @@ export const mainListItems = (
     </ListItem>
     <ListItem button>
       <ListItemIcon>
-        <Insert_ChartIcon />
+        <InsertChartIcon />
       </ListItemIcon>
       <ListItemText primary="Visualization" />
     </ListItem>
