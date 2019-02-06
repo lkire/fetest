@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import webcover from './webcover.jpg';
+
 import './App.css';
 //import TimelineLite from "gsap/TimelineLite";
 //import TweenLite from "gsap/TweenLite";
@@ -47,10 +47,6 @@ import ButtonAppBar from './bar.js'
 //        document.body.appendChild(script);
 //    }
 
-
-const API = 'http://demo.ryptco.com:5007';
-const DEFAULT_QUERY = '';
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -91,7 +87,7 @@ class App extends Component {
   }
     
     render() {
-	const st = this.state.message // fetch('http://demo.ryptco.com:5007').then(response => response.json())
+	//const st = this.state.message // fetch('http://demo.ryptco.com:5007').then(response => response.json())
 	
       return (
         <div className="App">
