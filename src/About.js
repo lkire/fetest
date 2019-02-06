@@ -3,11 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
-import GridListTileBar from '@material-ui/core/GridListTileBar';
-import IconButton from '@material-ui/core/IconButton';
-import InfoIcon from '@material-ui/icons/Info';
 
-import image from './profile_smaller.jpg';
 import profile from './about/profile_bw.jpg'
 import architecture from './about/ProductionDS.jpg'
 
@@ -63,7 +59,7 @@ function AboutPage(props) {
     <div className={classes.root}>
 	    <GridList cellHeight={400} cols={1} spacing={2} className={classes.gridList}>
           <GridListTile key={profile} >
-            <img src={profile} />
+            <img src={profile} alt="this is the alt" />
           </GridListTile>
       </GridList>
       
@@ -160,7 +156,7 @@ function AboutPage(props) {
 
 
   <AspectRatio>
-    <img src={architecture} className={classes.media}/>
+    <img src={architecture} alt="this is the alt" className={classes.media}/>
   </AspectRatio>
 
     </div>
