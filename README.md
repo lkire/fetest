@@ -1,3 +1,13 @@
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+
+##Data Science Front End
+
+Welcome to fetest, a datascience frontend for sharing results from
+ongoing studies extremely quickly with clients and colleagues.
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
