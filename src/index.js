@@ -1,14 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import Demo from './demo';
 import * as serviceWorker from './serviceWorker';
 import 'typeface-roboto';
 import theme from './theme';
-import { withStyles, MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import green from '@material-ui/core/colors/green';
-
+import { MuiThemeProvider } from '@material-ui/core/styles';
 
 ReactDOM.render(
 	<MuiThemeProvider theme={theme}>
