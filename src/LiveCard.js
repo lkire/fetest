@@ -70,7 +70,7 @@ class LiveCard extends React.Component {
       expanded: false,
       full: false,
       title: 'Coming Soon',
-      src: 'http://demo.ryptco.com:5006/testapp',
+      src: 'http://demo.ryptco.com:5006/brownian',
       // txt: () => { <Typography paragraph> Coming soon. </Typography> },
 
     };
@@ -120,9 +120,9 @@ class LiveCard extends React.Component {
 	        
 	        component="iframe"
 	        className={classes.iframe}
-          frameborder="0"
+          frameBorder="0"
 
-	        src={this.props.src || 'http://demo.ryptco.com:5006'}
+	        src={this.props.src || 'http://demo.ryptco.com:5006/testapp'}
 	        title={this.props.title}
 	       />
          
