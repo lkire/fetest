@@ -1,3 +1,6 @@
+import 'katex/dist/katex.min.css';
+import TeX from "@matejmazur/react-katex";
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -12,6 +15,8 @@ ReactDOM.render(
 		<Demo />
 	</MuiThemeProvider>
 	, document.getElementById('root')
+
+
 );
 
 // If you want your app to work offline and load faster, you can change
