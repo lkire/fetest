@@ -10,13 +10,19 @@ import LiveCard from './LiveCard'
 const styles = theme => ({
   card: {
     maxWidth: 400,
+    borderRadius: 2,
+    overflow: 'hidden',
+
   },
   root: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     overflow: 'hidden',
-    
+
+  },
+  divmargin: {
+    margin: 10,
   },
   gridList: {
     width: 800,
@@ -51,9 +57,10 @@ function AdvancedList(props) {
     <div className={classes.root}>
       
         {cardData.map(tile => (
-          
-            <LiveCard className={classes.card} title='Test' />
-      
+
+          <div className={classes.divmargin}>
+            <LiveCard className={classes.card} title={tile.title} />
+          </div>
     
     ))}
     </div>
