@@ -20,6 +20,9 @@ const styles = theme => ({
     overflow: 'hidden',
     
   },
+  heading: {
+    width: '100%',
+  },
   gridList: {
     width: 1200,
     height: 400,
@@ -90,6 +93,7 @@ function AboutPage(props) {
         Motivation 
       </Typography>
 
+
 <Typography variant="body1" gutterBottom>
   The advertising success of "AI" and "Machine Learning" can create 
   for its practitioners a heavy demand for the frequent communication of its ideas, results, and progress  
@@ -129,13 +133,13 @@ function AboutPage(props) {
    problems and efficiently communicate with a diverse team and clients. 
   </Typography>
   <Typography variant="body1" gutterBottom>
-   {<a href='http://holoviews.org/'>Holoviews</a>} and associated projects provide most of the tools to handle the common time 
+   {<a href='http://holoviews.org/'>Holoviews</a>} and associated projects promise (in time) to provide most of the tools to handle the common time 
   wasters when producing web visualization, like issues related to duplication of work, 
   threading, blocking,
   available memory, and callbacks. Scaling and deployment are the remaining issues 
   with any Python project on the web,
-  but the {<a href='https://www.tornadoweb.org/en/stable/'>Tornado</a>} server 
-  combined with a load-balancer like {<a href='https://www.nginx.com/'> NGiNX</a>} in a microservices architecture
+  but a lightweight server like {<a href='https://www.tornadoweb.org/en/stable/'>Tornado</a>} along
+  with dedicated load balancing and routing from a tool like {<a href='https://www.nginx.com/'> NGiNX</a>} in a microservices architecture
   seems to theoretically provide 
   the solution. 
   </Typography>
@@ -143,17 +147,19 @@ function AboutPage(props) {
   <Divider variant="middle" color="primary"/>
 
   <Typography variant="body1" gutterBottom>
-  In practice, I suspect it will be touchy work 
-  scaling to maintain optimal response times under varying load. 
-  This site exists to work out the kinks in deploying these 
-  technologies together in a React App.  
+  In practice, exposing python to the internet is a challenge because 
+  thread safety is an ever present threat to stability and scalability, 
+  and async architecture has not found 
+  its way into all the most useful packages yet.
+  This site exists to make progress in deploying these 
+  technologies together in a scalable React App. Thanks to orchestration technologies
+  like docker compose and kubernetes a stable application can be 
+  delivered without entirely stable services!
   </Typography>
 
-  <Typography variant="h4" color="primary" gutterBottom>
+  <Typography variant="h4" color="primary" align='center' className={classes.heading} gutterBottom>
     Architecture
   </Typography> 
-
-
 
   <AspectRatio>
     <img src={architecture} alt="this is the alt" className={classes.media}/>
