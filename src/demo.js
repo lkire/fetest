@@ -24,8 +24,7 @@ import './App.css';
 import About from './About';
 import Soon from './Soon';
 import Visuals from './Visuals';
-
-
+import Models from './Models';
 
 const drawerWidth = 200;
 
@@ -179,7 +178,7 @@ class Dashboard extends React.Component {
               noWrap
               className={classes.title}
             >
-              Steve Alkire, PhD    
+              Steve Alkire, PhD
             </Typography>
 
      
@@ -236,12 +235,12 @@ class Dashboard extends React.Component {
 
           {{
           0: <About />,
-          1: <Soon />,
+          1: <Models />,
           2: <Visuals />,
           3: <Soon />,
           4: <Soon />,
         }[this.state.selectedIndex]}
-          <Typography variant="h4" gutterBottom  color="secondary">
+          <Typography align='center' variant="caption" gutterBottom  color="secondary">
             Page {this.state.selectedIndex}
             
           </Typography>
