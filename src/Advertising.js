@@ -59,7 +59,7 @@ function AdvancedList(props) {
         {cardData.map(tile => (
 
           <div className={classes.divmargin}>
-            <LiveCard className={classes.card} title={tile.title} />
+            <LiveCard title={tile.title} src={tile.source} txt={tile.txt}/>
           </div>
     
     ))}

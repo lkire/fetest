@@ -59,7 +59,7 @@ function AdvancedList(props) {
         {cardData.map(tile => (
 
           <div className={classes.divmargin}>
-            <ModelCard title={tile.title} image={tile.image} />
+            <ModelCard title={tile.title} image={tile.image} txt={tile.txt}/>
           </div>
     
     ))}
