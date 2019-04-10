@@ -18,17 +18,17 @@ import IconButton from '@material-ui/core/IconButton';
 import ZoomOutMapIcon from '@material-ui/icons/ZoomOutMap';
 
 import Fullscreen from "react-full-screen";
+import {MarkdownRender} from './MarkdownRender'
 
 const styles = theme => ({
   card: {
-
   },
 
 
   iframe: {
-  margin: 'auto',
-  height: '45vw',
-  width: '80vw',
+      margin: 'auto',
+      height: '280pt',
+      width: '80vw',
 
   },
 
@@ -70,11 +70,10 @@ class LiveCard extends React.Component {
       expanded: false,
       full: false,
       title: 'Coming Soon',
-      src: 'http://demo.ryptco.com:5006/brownian',
+      src: 'http://lkire.com:5006/example',
       // txt: () => { <Typography paragraph> Coming soon. </Typography> },
 
     };
-
   }
 
   setExpanded = () => {
@@ -85,6 +84,10 @@ class LiveCard extends React.Component {
     this.setState({ full: true });
   };
 
+  handleFile = (textfile) => {
+    fetch(textfile)
+    .then((r) => r.text())  
+  }
 
   
 
@@ -110,13 +113,11 @@ class LiveCard extends React.Component {
 
 	    
         <Fullscreen
-      	  
+	
           enabled={this.state.full}
           onChange={full => this.setState({full})}
         >
-	
-   
-	      <CardMedia
+	   <CardMedia
 	        
 	        component="iframe"
 	        className={classes.iframe}
@@ -124,7 +125,7 @@ class LiveCard extends React.Component {
 
 	        src={this.props.src || 'http://demo.ryptco.com:5006/testapp'}
 	        title={this.props.title}
-	       />
+	    />
          
         
         
@@ -152,7 +153,7 @@ class LiveCard extends React.Component {
 	      </CardActions>
 	      <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
 	        <CardContent>
-	          <Typography paragraph>Method:</Typography>
+	          <MarkdownRender source={this.props.txt}/>
 	        </CardContent>
 	      </Collapse>
 	      
