@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 
-import cardData from './models/cardData';
+import cardData from './lit/cardData';
 import withWidth from '@material-ui/core/withWidth';
 import ModelCard from './ModelCard'
-
+import Typography from '@material-ui/core/Typography';
 
 const styles = theme => ({
   card: {
@@ -55,7 +55,9 @@ function AdvancedList(props) {
 
   return (
     <div className={classes.root}>
-      
+      <Typography className={classes.center} variant="h3" color="primary" gutterBottom>
+        <b> Lit Review </b> 
+      </Typography>
         {cardData.map(tile => (
 
           <div className={classes.divmargin}>
