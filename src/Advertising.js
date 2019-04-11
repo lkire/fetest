@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 
-import cardData from './visuals/cardData';
+import cardData from './advertising/cardData';
 import withWidth from '@material-ui/core/withWidth';
 import LiveCard from './LiveCard'
 
@@ -55,7 +56,9 @@ function AdvancedList(props) {
 
   return (
     <div className={classes.root}>
-      
+      <Typography className={classes.center} variant="h3" color="primary" gutterBottom>
+        <b> Advertising </b> 
+      </Typography>
         {cardData.map(tile => (
 
           <div className={classes.divmargin}>
